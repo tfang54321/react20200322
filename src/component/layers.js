@@ -1,21 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import LayerItem from './LayerItem';
 
 export default class layers extends Component {
 
  
     render() {
-
-        // const {layerid,layertitle} = this.props.layertodo;
-        // console.log(layerid);
-        // console.log(layertitle);
-        return (
-            <div>
-                <hi>
-abc_layers
-
-                </hi>
-               
-            </div>
-        )
+      console.log("here is layers");
+        return  this.props.todoLayers.map((todo) => (
+            <LayerItem  key={todo.layerid} todo={todo}   />
+             
+             ));
     }
 }

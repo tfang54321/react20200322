@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { throwStatement } from '@babel/types';
 import PropTypes from 'prop-types';
+import About from './pages/About';
+import Layers from './layers';
 
 
 
@@ -25,23 +27,31 @@ export class TodoItem extends Component {
     //     console.log(this.props)
     // }
     render() {
-        const {id,title,layerTodos} = this.props.todo;
+        const {id,title,layerstodos} = this.props.todo;
+        const layerslength = layerstodos.length;
+        
         // const {layerid,layertitle} = this.props.layerTodo;
-        console.log(layerTodos);
+        console.log(layerstodos.length);
+        console.log('from todoIem');
+     
      
         return (
+
+            //<layers  todoLayers={layerstodos} />
             <div style={this.getStyle()}>
             <p>
             <input type ="checkbox" onChange={this.props.markComplete.bind(this,id)}/>{' '}
                {title}
           
                <button style={btnStyle} onClick = {this.props.delTodo.bind(this,id)}>x</button>
-               {/* <button style={btnStyle} onClick = {this.props.layerTodo.bind(this,layerid)}>x</button> */}
-              
+ {layerslength>0 ?<Layers  todoLayers={layerstodos} /> :''}
+
                </p>
          
             </div>
-        )
+
+    
+        );
     }
 
  

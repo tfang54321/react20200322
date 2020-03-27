@@ -38,18 +38,21 @@ class App extends React.Component {
         id: uuid(),
         title: 'Tke out the trush',
         complete: true,
+        layerstodos:''
         
       },
       {
         id: uuid(),
         title: ' meet with boss',
         complete: false,
+        layerstodos:''
        
       },
       {
         id: uuid(),
         title: 'Dinner with someone',
         complete: false,
+        layerstodos:''
         
       }
     ]
@@ -60,10 +63,16 @@ class App extends React.Component {
   markComplete = (id) => {
     this.setState(
       {
-        claps:'true',
+       
       todos: this.state.todos.map(todo => {
         if (todo.id === id) {
-          todo.complete = !todo.complete
+          todo.complete = !todo.complete;
+         if(todo.layerstodos.length > 0){
+            todo.layerstodos = this.state.layertodos;
+           todo.layerstodos = '';
+         }else{
+         todo.layerstodos = this.state.layertodos;
+         }
         }
         return todo;
 
@@ -122,9 +131,7 @@ class App extends React.Component {
             <React.Fragment>
                  <AddTodo  addTodo={this.addTodo}/>
                  <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo} />
-                 if( this.state.claps === 'true'){
-                 <About/>
-                 }
+              
             </React.Fragment>
           )}/>
        <Route path="/about"  component={About}/>
