@@ -15,81 +15,108 @@ class App extends React.Component {
  
 
   state = {
-    claps:'false',
+   
+
+    sitetodos:[
+       {
+         siteid: uuid(),
+       sitelocation:'100 kent'
+       },
+       {
+        siteid: uuid(),
+         sitelocation: '200 kent'
+
+       },
+       {
+
+        siteid: uuid(),
+        sitelocation: '300 somerset'
+
+       }
+
+
+
+    ],
+
+
+
     layertodos: [
       {
         layerid: uuid(),
-        layertitle: 'g1 titlea1 _for_Take out the trush'
+        layertitle: 'g1 titlea1 _for_Take out the trush',
+        sitetodos:''
       },
       {
         layerid: uuid(),
-        layertitle: 'g1 titlea2_for_Take out the trush'
-
+        layertitle: 'g1 titlea2_for_Take out the trush',
+        sitetodos:''
       },
       {
         layerid: uuid(),
-        layertitle: 'g1 titlea3_for_Take out the trush'
-
+        layertitle: 'g1 titlea3_for_Take out the trush',
+        sitetodos:''
       }
 
     ],
-    layertodos_2: [
-      {
-        layerid: uuid(),
-        layertitle: 'g1 titlea1 _for_Take out the trush'
-      },
-      {
-        layerid: uuid(),
-        layertitle: 'g1 titlea2_for_Take out the trush'
+    // layertodos_2: [
+    //   {
+    //     layerid: uuid(),
+    //     layertitle: 'g1 titlea1 _for_Take out the trush'
+    //   },
+    //   {
+    //     layerid: uuid(),
+    //     layertitle: 'g1 titlea2_for_Take out the trush'
 
-      },
-      {
-        layerid: uuid(),
-        layertitle: 'g1 titlea3_for_Take out the trush'
+    //   },
+    //   {
+    //     layerid: uuid(),
+    //     layertitle: 'g1 titlea3_for_Take out the trush'
 
-      }
+    //   }
 
-    ],
-    layertodos_3: [
-      {
-        layerid: uuid(),
-        layertitle: 'g1 titlea1 _for_Take out the trush'
-      },
-      {
-        layerid: uuid(),
-        layertitle: 'g1 titlea2_for_Take out the trush'
+    // ],
+    // layertodos_3: [
+    //   {
+    //     layerid: uuid(),
+    //     layertitle: 'g1 titlea1 _for_Take out the trush'
+    //   },
+    //   {
+    //     layerid: uuid(),
+    //     layertitle: 'g1 titlea2_for_Take out the trush'
 
-      },
-      {
-        layerid: uuid(),
-        layertitle: 'g1 titlea3_for_Take out the trush'
+    //   },
+    //   {
+    //     layerid: uuid(),
+    //     layertitle: 'g1 titlea3_for_Take out the trush'
 
-      }
+    //   }
 
-    ],
-    layertodos_4: [
-      {
-        layerid: uuid(),
-        layertitle: 'g1 titlea1 _for_Take out the trush'
-      },
-      {
-        layerid: uuid(),
-        layertitle: 'g1 titlea2_for_Take out the trush'
+    // ],
+    // layertodos_4: [
+    //   {
+    //     layerid: uuid(),
+    //     layertitle: 'g1 titlea1 _for_Take out the trush'
+    //   },
+    //   {
+    //     layerid: uuid(),
+    //     layertitle: 'g1 titlea2_for_Take out the trush'
 
-      },
-      {
-        layerid: uuid(),
-        layertitle: 'g1 titlea3_for_Take out the trush'
+    //   },
+    //   {
+    //     layerid: uuid(),
+    //     layertitle: 'g1 titlea3_for_Take out the trush'
 
-      }
+    //   }
 
-    ],
+    // ],
     todos: [
       {
         id: uuid(),
         title: 'Tke out the trush',
         complete: true,
         layerstodos:''
+
+            
         
       },
       {
@@ -97,7 +124,8 @@ class App extends React.Component {
         title: ' meet with boss',
         complete: false,
         layerstodos:''
-       
+
+     
       },
       {
         id: uuid(),

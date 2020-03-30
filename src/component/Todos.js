@@ -27,8 +27,11 @@ class Todos extends React.Component{
   }
 
   renderListItems() {
-    return  this.props.todos.map((todo) => (
-   <TodoItem  key={todo.id} todo={todo}  markComplete={this.props.markComplete }  delTodo = {this.props.delTodo} />
+
+
+    return  this.props.todos.map((todo_temp) => (
+
+   <TodoItem  key={todo_temp.id} todoItem={todo_temp}  markComplete={this.props.markComplete }  delTodo = {this.props.delTodo} />
       //  <li key={1}><a href="#">{todo.title}</a></li>
       // <li key={2}><a href="#">{todo.title}</a></li>
     ));
