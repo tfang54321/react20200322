@@ -15,3 +15,25 @@
     margin: 4px 2px;
     cursor: pointer;
   }
+
+  .plus {
+    display: block;
+    height: 0.6em;
+    width: 0.6em;
+    font-size: 100px;
+    text-align: center;
+    line-height: 0.5em;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    color: #ffffff;
+    background-color: #000000;
+  }
+  
+  .plus::before {
+    display: block;
+    content: '+';
+  }
